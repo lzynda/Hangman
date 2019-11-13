@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hangman.Views.GamePage"
+             xmlns:vm="clr-namespace:Hangman.ViewModels"
+             Title="Wisielec">
+
+    <ContentPage.BindingContext>
+        <vm:GameViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+       
+        <Grid >
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />                
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" >               
+               
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+               </Grid.ColumnDefinitions>
+
+
+
+                <Label FontSize="40" Text="{Binding DisplayChances}" HorizontalOptions="Center" 
+                       VerticalOptions="Center" Grid.Row="0"   />
+
+                <Label FontSize="40" Text="{Binding DisplayWinLose}" HorizontalOptions="Center" 
+                       VerticalOptions="Center" Grid.Row="1" TextColor="RoyalBlue" 
+                       IsVisible="{Binding IsWinLoseVisible}" FontAttributes="Bold" />
+
+                <Label FontSize="30" Text="{Binding DisplayText}" HorizontalOptions="Center" VerticalOptions="Center"  
+                       Grid.Row="3" FontAttributes="Bold" />
+               
+                <Label FontSize="15" Text="{Binding DisplayUsedLetters}" HorizontalOptions="Center" 
+                       VerticalOptions="Center"  Grid.Row="4" />
+                
+                <Button Text="{Binding StartNextText}"
+                  Command="{Binding StartCommand}"
+                  IsVisible="{Binding IsNextVisible}"
+                  Grid.Row="5" Grid.Column="0" 
+                  BackgroundColor="OliveDrab"   />
+
+            </Grid>                                   
+
+            <Button Text="A"
+                Command="{Binding AddCharCommand}"               
+                CommandParameter="A"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="1" Grid.Column="0" />
+
+
+            <Button Text="Ą"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ą"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="1" Grid.Column="1" />
+
+            <Button Text="B"
+                Command="{Binding AddCharCommand}"               
+                CommandParameter="B"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="1" Grid.Column="2" />
+
+            <Button Text="C"
+                Command="{Binding AddCharCommand}"                
+                CommandParameter="C"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="1" Grid.Column="3" />
+
+            <Button Text="Ć"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ć"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="1" Grid.Column="4" />
+
+            <Button Text="D"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="D"
+                IsEnabled="{Binding IsCharEnabled}"    
+                Grid.Row="1" Grid.Column="5" />
+
+            <Button Text="E"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="E"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="1" Grid.Column="6" />
+
+            <Button Text="Ę"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ę"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="1" Grid.Column="7" />
+
+            <Button Text="F"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="F"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="0" />
+
+            <Button Text="G"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="G"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="1" />
+
+            <Button Text="H"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="H"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="2" />
+
+            <Button Text="I"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="I"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="3" />
+
+            <Button Text="J"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="J"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="4" />
+
+            <Button Text="K"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="K"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="5" />
+
+            <Button Text="L"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="L"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="6" />
+
+            <Button Text="Ł"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ł"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="2" Grid.Column="7" />
+
+            <Button Text="M"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="M"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="0" />
+
+            <Button Text="N"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="N"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="1" />
+
+            <Button Text="Ń"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ń"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="2" />
+
+            <Button Text="O"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="O"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="3" />
+
+            <Button Text="Ó"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ó"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="4" />
+
+            <Button Text="P"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="P"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="5" />
+
+            <Button Text="R"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="R"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="6" />
+
+            <Button Text="S"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="S"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="3" Grid.Column="7" />
+
+            <Button Text="Ś"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ś"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="0" />
+
+            <Button Text="T"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="T"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="1" />
+
+            <Button Text="U"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="U"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="2" />
+
+            <Button Text="W"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="W"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="3" />
+
+            <Button Text="Y"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Y"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="4" />
+
+            <Button Text="Z"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Z"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="5" />
+
+            <Button Text="Ź"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ź"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="6" />
+
+            <Button Text="Ż"
+                Command="{Binding AddCharCommand}"
+                CommandParameter="Ż"
+                IsEnabled="{Binding IsCharEnabled}"
+                Grid.Row="4" Grid.Column="7" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

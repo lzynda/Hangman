@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hangman.Views.OptionsPage"
+             xmlns:vm="clr-namespace:Hangman.ViewModels"
+             Title="Opcje">
+
+    <ContentPage.BindingContext>
+        <vm:OptionsViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+         </Grid.RowDefinitions>
+
+            <Label Text="Poziom Trudności" Grid.Row="1"  HorizontalOptions="Center" VerticalOptions="Center"
+                   FontAttributes="Bold" FontSize="30"/>
+
+            <Button Text="{Binding DisplayDifficulty}"  Command="{Binding DifficultyCommand}"  VerticalOptions="Center" FontSize="30"         
+                  Grid.Row="2"  HorizontalOptions="Center"  BackgroundColor="OliveDrab"   />
+            
+        </Grid>
+
+       
+        
+    </ContentPage.Content>
+</ContentPage>
